@@ -25,5 +25,15 @@ cursor.execute(f"INSERT INTO bibliothek (IDD, titel, author, status, standort) V
 conn.commit()  
 
 conn.close() 
+@app.route('/bücher') 
+def bücher():
+        
+        return render_template('bücher.html')
+
+@app.route('/add_bücher')
+def add_bücher():
+        return render_template('add_bücher.html')
+        
+
 
 
